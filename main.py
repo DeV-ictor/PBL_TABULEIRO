@@ -11,14 +11,6 @@ import json
 ctk.set_appearance_mode('system')
 ctk.set_default_color_theme('green')
 
-class CenterApp(ctk.CTkLabel):
-
-    def __init__(self, master):
-
-        set_img = ctk.CTkImage(light_image=Image.open('PBL_TABULEIRO/files/set.png'), dark_image=Image.open('PBL_TABULEIRO/files/set.png'), size=(500,500))
-        super().__init__(master, width=500, height=500, corner_radius=0, image=set_img, text='')
-
-
 class TopFrame(ctk.CTkFrame):
 
     def __init__(self, master):
@@ -82,20 +74,6 @@ class App(ctk.CTk):
         self.top_frame = TopFrame(self).place(x=0, y=0)
         self.lsframe = LeftSidedFrame(self).place(x=70, y=100)
         self.bottomframe = BottomFrame(self).place(x=0, y=605)
-        #self.centerframe = CenterApp(self).place(x=450, y=80)
-
-        #self.buttons()
-
-    def buttons(self):
-
-        play_button = ctk.CTkButton(self, width=300, height=70, text='Jogar', fg_color='darkgreen', bg_color='transparent', border_spacing=3, border_width=2, corner_radius=25, text_color=['#fff', '#fff'], font=('Roboto bold', 48)).place(x=80, y=120)
-
-        load_button = ctk.CTkButton(self, width=300, height=70, text='Carregar', fg_color='darkgreen', bg_color='darkgreen', border_spacing=3, border_width=2, corner_radius=25, text_color=['#fff', '#fff'], font=('Roboto bold', 48)).place(x=80, y=220)
-
-        ranking_button = ctk.CTkButton(self, width=300, height=70, text='Ranking', fg_color='darkgreen', bg_color='darkgreen', border_spacing=3, border_width=2, corner_radius=25, text_color=['#fff', '#fff'], font=('Roboto bold', 48)).place(x=80, y=320)
-
-        leave_button = ctk.CTkButton(self, width=300, height=70, text='Sair', fg_color='darkgreen', bg_color='darkgreen', border_spacing=3, border_width=2, corner_radius=25, text_color=['#fff', '#fff'], font=('Roboto bold', 48)).place(x=80, y=470)
-
 
 
 if __name__ == "__main__":
